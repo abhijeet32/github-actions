@@ -7,17 +7,10 @@ jobs:
         - name: Checkout Code
           uses: actions/checkout@v4 
 
-        - name: Install Cowsay Program
-          run: sudo apt-get install cowsay -y
-
-        - name: Execute Cowsay Command
-          run: cowsay -f dragon "I have a DRAGON.... DRACARYS" >> dragon.txt
-
-        - name: Test File Exists
-          run: grep -i "dragon" dragon.txt
-
-        - name: Read files 
-          run: cat dragon.txt
-
         - name: List files
           run: ls -ltra
+
+        - name: Execute Cowsay Script
+          run: |
+            chmod +x ascii-script.sh
+            ./ascii-script.sh
