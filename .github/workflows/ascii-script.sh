@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get install cowsay -y
-cowsay -f dragon "I have a DRADON... DRACARYS" >> dragon.txt
-grep -i "dragon" dragon.txt
-cat dragon.txt
+cowsay -f cow "I am a COW... MOOO" >> cow.txt
+grep -i "COW" cow.txt
+cat cow.txt
 ls -ltra
