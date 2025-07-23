@@ -8,7 +8,7 @@ jobs:
           run: sudo apt-get install cowsay -y
 
         - name: Execute Cowsay CMD
-          run: cowsay -f cow "I am a COW... MOOO" >> cow.txt
+          run: cowsay -f dragon "I have a DRAGON... DRACARYS" >> dragon.txt
 
         - name: Sleep for 30 seconds
           run: sleep 30
@@ -21,14 +21,14 @@ jobs:
           run: sleep 10
         
         - name: Test File Exists
-          run: grep -i "COW" cow.txt
+          run: grep -i "dragon" dragon.txt
 
     deploy_job_3:
         needs: test_job_2
         runs-on: ubuntu-latest
         steps:
         - name: Read and Display Cowsay Output
-          run: cat cow.txt
+          run: cat dragon.txt
 
         - name: Deploy
           run: echo "Deploying....."
